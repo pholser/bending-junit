@@ -53,6 +53,9 @@ ClasspathSuite + named category?
 
 Theories
 
+    -- ParameterSupplier
+    -- quickcheck
+
 Writing own Runner
 
     -- Enclosed Inners
