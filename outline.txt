@@ -1,0 +1,58 @@
+JUnit philosophies
+   -- OCP
+   -- Keep the core small
+   -- Tests should:
+      -- self-check
+      -- be isolated
+      -- be order-independent
+      -- be repeatable
+      -- have one reason to fail
+      -- clearly communicate intent
+
+JUnit 3 to 4
+   -- no need for TestCase superclass
+   -- test____() --> @Test
+   -- Template methods setUp()/tearDown() --> @Before/@After
+   -- 
+
+assertThat()
+   -- "How come JUnit doesn't have assert____()?"
+   -- assertEquals, assert(Not)Same, assert(Not)Null, assert(True|False),
+   fail
+   -- <T> assertThat(T target, Matcher<T> matcher)
+   -- For example:
+      assertThat("radar", isPalindrome);
+      
+      where PalindromeMatcher.
+
+   -- Matcher violates SRP.
+   
+   -- What about a matcher that has a predicate and a description builder
+      injected?
+
+Rules
+   ExpectedException
+   TempFolder
+   TestName
+   Logging
+   Others from core JUnit
+   Writing own:
+      -- FixedClock
+      -- reset sys props
+      (or, use PropertyBinder.getSystemProperties())
+
+Parameterized tests
+
+Suites
+
+Categories
+
+ClasspathSuite
+
+ClasspathSuite + named category?
+
+Theories
+
+Writing own Runner
+
+    -- Enclosed Inners
