@@ -52,7 +52,8 @@ ClasspathSuite
 ClasspathSuite + named category?
 
 Theories
-
+    -- DataPoint(s)
+    -- Mod10
     -- ParameterSupplier
     -- quickcheck
 
