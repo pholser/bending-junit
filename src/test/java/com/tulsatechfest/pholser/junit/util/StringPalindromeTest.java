@@ -1,8 +1,8 @@
-package com.tulsatechfest.pholser.junit;
+package com.tulsatechfest.pholser.junit.util;
 
 import org.junit.Test;
 
-import static com.tulsatechfest.pholser.junit.Strings.*;
+import static com.tulsatechfest.pholser.junit.util.Strings.*;
 import static org.junit.Assert.*;
 
 public class StringPalindromeTest {

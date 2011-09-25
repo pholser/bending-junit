@@ -1,4 +1,4 @@
-package com.tulsatechfest.pholser.junit;
+package com.tulsatechfest.pholser.junit.util;
 
 import com.google.common.base.Predicate;
 

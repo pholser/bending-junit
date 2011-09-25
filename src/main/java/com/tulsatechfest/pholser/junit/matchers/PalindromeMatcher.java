@@ -1,5 +1,6 @@
-package com.tulsatechfest.pholser.junit;
+package com.tulsatechfest.pholser.junit.matchers;
 
+import com.tulsatechfest.pholser.junit.util.Strings;
 import org.hamcrest.Description;
 
 public class PalindromeMatcher extends PredicateMatcher<String> {
