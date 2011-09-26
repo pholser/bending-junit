@@ -13,7 +13,7 @@ JUnit 3 to 4
    -- no need for TestCase superclass
    -- test____() --> @Test
    -- Template methods setUp()/tearDown() --> @Before/@After
-   -- 
+   -- No guaranteed order of @(Before|After)(Class)
 
 assertThat()
    -- "How come JUnit doesn't have assert____()?"
@@ -40,6 +40,7 @@ Rules
       -- FixedClock
       -- reset sys props
       (or, use PropertyBinder.getSystemProperties())
+   -- No guaranteed order (gh-issue)
 
 Parameterized tests
 
