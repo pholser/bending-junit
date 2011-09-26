@@ -41,18 +41,19 @@ Rules
       -- reset sys props
       (or, use PropertyBinder.getSystemProperties())
    -- No guaranteed order (gh-issue)
+   -- Alistair Israel rules
 
-Parameterized tests
+M - Parameterized tests
 
-Suites
+T - Suites
 
-Categories
+W - Categories
 
-ClasspathSuite
+TH - ClasspathSuite
 
-ClasspathSuite + named category?
+TH - ClasspathSuite + named category?
 
-Theories
+Su/M - Theories
     -- DataPoint(s)
     -- Mod10
     -- ParameterSupplier
