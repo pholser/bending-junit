@@ -8,6 +8,7 @@ import org.junit.experimental.theories.Theories;
 import org.junit.experimental.theories.Theory;
 import org.junit.runner.RunWith;
 
+import static com.tulsatechfest.pholser.junit.matchers.SameContentsMatcher.*;
 import static java.util.Arrays.*;
 import static java.util.Collections.*;
 import static org.junit.Assert.*;
@@ -40,6 +41,6 @@ public class SameContentsMatcherTest {
         assumeNotNull(first, second);
 
         boolean methodResult = Containers.haveSameContents(first, second);
-        assertEquals(methodResult, SameContentsMatcher.hasSameContentsAs(first).matches(second));
+        assertEquals(methodResult, hasSameContentsAs(first).matches(second));
     }
 }

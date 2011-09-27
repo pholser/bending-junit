@@ -31,16 +31,16 @@ assertThat()
       injected?
 
 Rules
-   ExpectedException
-   TempFolder
-   TestName
-   Logging
-   Others from core JUnit
+x   ExpectedException
+x   TempFolder
+x   TestName
+x   Logging
+x   Others from core JUnit
    Writing own:
-      -- FixedClock
-      -- reset sys props
+x      -- FixedClock
+x      -- reset sys props
       (or, use PropertyBinder.getSystemProperties())
-   -- No guaranteed order (gh-issue)
+x   -- No guaranteed order (gh-issue)
    -- Alistair Israel rules
 
 M - Parameterized tests
@@ -53,10 +53,11 @@ TH - ClasspathSuite
 
 TH - ClasspathSuite + named category?
 
-Su/M - Theories
-    -- DataPoint(s)
+Su/M 
+x - Theories
+x    -- DataPoint(s)
     -- Mod10
-    -- ParameterSupplier
+x     -- ParameterSupplier
     -- quickcheck
 
 Writing own Runner
