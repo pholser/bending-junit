@@ -18,11 +18,11 @@ import static org.junit.Assume.*;
 import static org.junit.rules.ExpectedException.*;
 
 @RunWith(Theories.class)
+@Category(InvolvingRules.class)
 public class CannotInstantiateUtilityClasses {
     @Rule public final ExpectedException thrown = none();
 
     @Theory
-    @Category(InvolvingRules.class)
     public void attemptInstantiation(@Any Class<?> utility) throws Exception {
         assumeThat(utility, new HasPrivateZeroArgCtor());
 
