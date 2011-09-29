@@ -60,6 +60,8 @@ x    -- DataPoint(s)
 x     -- ParameterSupplier
     -- quickcheck
 
-Writing own Runner
+M/T/W - Writing own Runner
+
+-- map out responsibilities of collaborating classes in a Runner
 
     -- Enclosed Inners
