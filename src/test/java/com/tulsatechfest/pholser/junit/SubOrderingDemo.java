@@ -1,5 +1,6 @@
 package com.tulsatechfest.pholser.junit;
 
+import com.tulsatechfest.pholser.junit.categories.InvolvingRules;
 import com.tulsatechfest.pholser.junit.rules.PrintingRule;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -8,10 +9,14 @@ import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
+@Category(InvolvingRules.class)
 public class SubOrderingDemo extends OrderingDemo {
-    @ClassRule public static PrintingRule subClassRule1 = new PrintingRule(SubOrderingDemo.class + "#subClassRule1");
-    @ClassRule public static PrintingRule subClassRule2 = new PrintingRule(SubOrderingDemo.class + "#subClassRule2");
+    @ClassRule public static final PrintingRule subClassRule1 =
+            new PrintingRule(SubOrderingDemo.class + "#subClassRule1");
+    @ClassRule public static final PrintingRule subClassRule2 =
+            new PrintingRule(SubOrderingDemo.class + "#subClassRule2");
     @Rule public final PrintingRule subRule1 = new PrintingRule(SubOrderingDemo.class + "#subRule1");
     @Rule public final PrintingRule subRule2 = new PrintingRule(SubOrderingDemo.class + "#subRule2");
 

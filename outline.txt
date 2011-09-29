@@ -43,15 +43,15 @@ x      -- reset sys props
 x   -- No guaranteed order (gh-issue)
    -- Alistair Israel rules
 
-M - Parameterized tests
+x M - Parameterized tests
 
-T - Suites
+x T - Suites
 
-W - Categories
+x W - Categories
 
-TH - ClasspathSuite
+x TH - ClasspathSuite
 
-TH - ClasspathSuite + named category?
+x  TH - ClasspathSuite + named category?
 
 Su/M 
 x - Theories

@@ -1,5 +1,6 @@
 package com.tulsatechfest.pholser.junit;
 
+import com.tulsatechfest.pholser.junit.categories.InvolvingRules;
 import com.tulsatechfest.pholser.junit.rules.PrintingRule;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -8,10 +9,11 @@ import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 public class OrderingDemo {
-    @ClassRule public static PrintingRule classRule1 = new PrintingRule(OrderingDemo.class + "#classRule1");
-    @ClassRule public static PrintingRule classRule2 = new PrintingRule(OrderingDemo.class + "#classRule2");
+    @ClassRule public static final PrintingRule classRule1 = new PrintingRule(OrderingDemo.class + "#classRule1");
+    @ClassRule public static final PrintingRule classRule2 = new PrintingRule(OrderingDemo.class + "#classRule2");
     @Rule public final PrintingRule rule1 = new PrintingRule(OrderingDemo.class + "#rule1");
     @Rule public final PrintingRule rule2 = new PrintingRule(OrderingDemo.class + "#rule2");
 
@@ -36,11 +38,13 @@ public class OrderingDemo {
     }
 
     @Test
+    @Category(InvolvingRules.class)
     public final void orderingTest1() {
         System.out.println(OrderingDemo.class + "#orderingTest1()");
     }
 
     @Test
+    @Category(InvolvingRules.class)
     public final void orderingTest2() {
         System.out.println(OrderingDemo.class + "#orderingTest2()");
     }
