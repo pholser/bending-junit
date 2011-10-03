@@ -1,65 +1,185 @@
-JUnit philosophies
-   -- OCP
-   -- Keep the core small
-   -- Tests should:
-      -- self-check
-      -- be isolated
-      -- be order-independent
-      -- be repeatable
-      -- have one reason to fail
-      -- clearly communicate intent
+1) Title/Front Matter
 
-JUnit 3 to 4
+2) Agenda
+
+   -- JUnit Philosophies
+   -- JUnit 3 to 4
+   -- assertThat(), Matchers
+   -- Rules
+   -- Theories and Assumptions
+   -- Runners
+   
+3) JUnit Philosophies: Keep the Core Small
+
+   -- A framework that you have to rework every time something new comes along isn't much of
+      a framework.
+   -- You want degrees of freedom where you know you need them, and nowhere else.
+
+4) JUnit Philosophies: OCP
+
+   -- Framework classes are open to extension but closed to modification
+
+5) JUnit Philosophies: Tests
+
+   -- Small
+   -- Fast (1000s/sec)
+   -- Isolated
+   -- Order-independent
+   -- Repeatable
+   -- One reason to fail
+   -- Clearly, concisely communicate intent
+
+6) JUnit 3 to 4
    -- no need for TestCase superclass
    -- test____() --> @Test
    -- Template methods setUp()/tearDown() --> @Before/@After
    -- No guaranteed order of @(Before|After)(Class)
 
-assertThat()
-   -- "How come JUnit doesn't have assert____()?"
-   -- assertEquals, assert(Not)Same, assert(Not)Null, assert(True|False),
-   fail
+7) Assertions
+
+   -- assertEquals, assert(Not)Same, assert(Not)Null, assertTrue, assertFalse...
+   -- What about assertNotEquals?
+   -- assert_____()?
+
+8) assertThat()
+
+   -- Separate the asserting mechanism from the test that pops the assertion
    -- <T> assertThat(T target, Matcher<T> matcher)
-   -- For example:
-      assertThat("radar", isPalindrome);
-      
-      where PalindromeMatcher.
+   -- Hamcrest
 
-   -- Matcher violates SRP.
+   -- arguments expected/actual reversed
+   -- more "fluent" API
+
+9) Example: Palindromes
+
+10) Example: Collections have same contents
+
+11) Single Responsibility Principle (SRP)
+
+   -- A class should have one reason to change
+   -- Could argue that Matcher has two
+
+12) PredicateMatcher
+
+   -- Guava predicates
+   -- Easier to plug in the "deciding" capability
+   -- Lambda-friendly
+
+   -- Demonstrate with palindrome, same contents
    
-   -- What about a matcher that has a predicate and a description builder
-      injected?
+13) Rules
 
-Rules
-x   ExpectedException
-x   TempFolder
-x   TestName
-x   Logging
-x   Others from core JUnit
-   Writing own:
-x      -- FixedClock
-x      -- reset sys props
-      (or, use PropertyBinder.getSystemProperties())
-x   -- No guaranteed order (gh-issue)
-   -- Alistair Israel rules
+   -- BeforeClass, Before/test/After, Before/test/After, ..., AfterClass
 
-x M - Parameterized tests
+   -- Rules allow you to insert logic into the flow to
+   
+      -- set up context before test is run
+      -- decide whether to run the test
+      -- do something with the result of a test
 
-x T - Suites
+14) ExpectedException
 
-x W - Categories
+   -- JUnit 3 style
+   -- JUnit 4 first style
+   -- Example
+   -- Watch where you train your expectation
+   -- Matcher-friendly
+      -- Cause
 
-x TH - ClasspathSuite
+15) TempFolder
 
-x  TH - ClasspathSuite + named category?
+16) TestName
 
-Su/M 
-x - Theories
-x    -- DataPoint(s)
-    -- Mod10
-x     -- ParameterSupplier
-    -- quickcheck
+17) Logging
 
-Writing own Runner
+18) FixedClock
+    Reset system properties
 
-    -- Enclosed Inners
+19) Alistair Israel rules -- https://github.com/AlistairIsrael/junit-rules
+
+20) Under the hood
+
+   -- Statement: some unit of work to be done in running a test or suite
+       evaluate()
+
+   -- Rules get to alter Statements, or wrap them: 
+
+       apply(Statement, Description) : Statement
+
+21) Ordering
+
+   -- Demo
+   -- 4.10: RuleChain
+   
+22) Parameterized Tests
+
+   -- @RunWith(Parameterized.class)
+   
+   -- Constructor that accepts parameters
+
+   -- @Parameters public static method returns a Collection
+
+   -- Items in the collection are arrays whose elements correspond to the ctor signature
+
+   -- @Test run once for each value set given by @Parameters method
+
+23) Example: Prime Factors
+
+24) Suites
+
+   -- @RunWith(Suite.class)
+
+   -- @SuiteClasses({X.class, Y.class, ...})
+
+25) Categories
+
+   -- @RunWith(Categories.class)
+   -- @SuiteClasses -- Categories is-a-kind-of Suite
+   -- @IncludeCategory/@ExcludeCategory
+
+   -- Mark test classes or methods with @Category(SomeClass.class)
+   -- where SomeClass is a class or interface (usually a marker interface)
+
+26) ClasspathSuite
+
+   -- http://johanneslink.net/projects/cpsuite.jsp
+   -- Easy to build an all-tests suite from classpath
+   -- Then, refine with Categories
+   
+   -- Example
+
+27) TDD: example-based testing
+   -- Build up confidence by adding examples
+      -- Examples help explain important cases we care about, too.
+
+28) Can we make stronger statements with our tests?
+
+   -- For any key k and plaintext p, decrypt(k, encrypt(k, p)) == p
+   -- For any positive integer n, the result of PrimeFactors.of(n) is such that:
+      -- all the factors pass a primality test
+      -- multiplying the factors together gives n
+      -- For any positive integer m != n, PrimeFactors.of(m) is not PrimeFactors.of(n)
+
+29) Theories
+
+   -- RunWith(Theories.class)
+   -- @Theory methods with parameters
+   -- @DataPoint(s) fields/methods with types that match
+   -- @Theory methods state their assumptions
+   -- Make assertions based on those assumptions
+
+30) Prime Factors theories
+
+31) Better way to smuggle in theory parms?
+
+   -- ParameterSupplier
+   -- Create annotation for a theory parm, that is itself annotated with
+      @ParametersSuppliedBy(SomeSupplier.class)
+
+32) Utility class theories
+
+33) junit-quickcheck
+
+   -- Come up with lots (?) of random values for theory parameters
+
+34) @RunWith: Behind the Music
