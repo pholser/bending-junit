@@ -6,8 +6,9 @@
    -- JUnit 3 to 4
    -- assertThat(), Matchers
    -- Rules
+   -- Other Custom Runners
    -- Theories and Assumptions
-   -- Runners
+   -- Runners: Behind the Music
    
 3) JUnit Philosophies: Keep the Core Small
 
