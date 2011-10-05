@@ -9,6 +9,11 @@ public class Strings {
             public boolean apply(String input) {
                 return isPalindrome(input);
             }
+
+            @Override
+            public String toString() {
+                return "a palindromic string";
+            }
         };
     }
 
