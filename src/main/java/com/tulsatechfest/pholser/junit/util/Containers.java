@@ -1,9 +1,9 @@
 package com.tulsatechfest.pholser.junit.util;
 
+import com.google.common.base.Predicate;
+
 import java.util.ArrayList;
 import java.util.Collection;
-
-import com.google.common.base.Predicate;
 
 public class Containers {
     private Containers() {

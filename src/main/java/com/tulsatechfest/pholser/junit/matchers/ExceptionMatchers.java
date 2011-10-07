@@ -1,10 +1,10 @@
 package com.tulsatechfest.pholser.junit.matchers;
 
-import java.lang.reflect.InvocationTargetException;
-
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.junit.internal.matchers.TypeSafeMatcher;
+
+import java.lang.reflect.InvocationTargetException;
 
 public class ExceptionMatchers {
     private ExceptionMatchers() {

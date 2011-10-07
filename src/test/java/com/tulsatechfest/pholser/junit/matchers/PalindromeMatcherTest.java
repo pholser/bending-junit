@@ -1,6 +1,5 @@
 package com.tulsatechfest.pholser.junit.matchers;
 
-import com.tulsatechfest.pholser.junit.matchers.PalindromeMatcher;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,10 +1,5 @@
 package com.tulsatechfest.pholser.junit.theories.supply;
 
-import java.lang.annotation.Retention;
-import java.lang.annotation.Target;
-import java.util.ArrayList;
-import java.util.List;
-
 import com.tulsatechfest.pholser.junit.matchers.ExceptionMatchers;
 import com.tulsatechfest.pholser.junit.parameterized.PrimeFactors;
 import com.tulsatechfest.pholser.junit.util.Classes;
@@ -14,6 +9,11 @@ import org.junit.experimental.theories.ParameterSignature;
 import org.junit.experimental.theories.ParameterSupplier;
 import org.junit.experimental.theories.ParametersSuppliedBy;
 import org.junit.experimental.theories.PotentialAssignment;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
+import java.util.ArrayList;
+import java.util.List;
 
 import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.*;

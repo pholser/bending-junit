@@ -3,8 +3,8 @@ package com.tulsatechfest.pholser.junit.matchers;
 import com.tulsatechfest.pholser.junit.util.Strings;
 import org.junit.Test;
 
-import static com.tulsatechfest.pholser.junit.matchers.PredicateMatcher.matches;
-import static org.hamcrest.CoreMatchers.not;
+import static com.tulsatechfest.pholser.junit.matchers.PredicateMatcher.*;
+import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
 public class PalindromeMatchingWithBarePredicateMatcher {

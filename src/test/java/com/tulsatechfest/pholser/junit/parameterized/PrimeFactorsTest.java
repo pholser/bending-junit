@@ -1,12 +1,12 @@
 package com.tulsatechfest.pholser.junit.parameterized;
 
-import java.util.Collection;
-import java.util.List;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+
+import java.util.Collection;
+import java.util.List;
 
 import static java.util.Arrays.*;
 import static java.util.Collections.*;

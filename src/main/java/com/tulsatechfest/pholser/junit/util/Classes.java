@@ -1,8 +1,8 @@
 package com.tulsatechfest.pholser.junit.util;
 
-import java.lang.reflect.Constructor;
-
 import com.google.common.base.Predicate;
+
+import java.lang.reflect.Constructor;
 
 import static java.lang.reflect.Modifier.*;
 
