@@ -1,7 +1,6 @@
 package com.tulsatechfest.pholser.junit.theories;
 
 import com.tulsatechfest.pholser.junit.categories.InvolvingRules;
-import com.tulsatechfest.pholser.junit.matchers.HasPrivateZeroArgCtor;
 import com.tulsatechfest.pholser.junit.theories.supply.ClassSupplier.Any;
 import org.junit.Rule;
 import org.junit.experimental.categories.Category;
@@ -14,6 +13,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 import static com.tulsatechfest.pholser.junit.matchers.ExceptionMatchers.*;
+import static com.tulsatechfest.pholser.junit.matchers.HasPrivateZeroArgCtor.*;
 import static org.junit.Assume.*;
 import static org.junit.rules.ExpectedException.*;
 
@@ -24,7 +24,7 @@ public class CannotInstantiateUtilityClasses {
 
     @Theory
     public void attemptInstantiation(@Any Class<?> utility) throws Exception {
-        assumeThat(utility, new HasPrivateZeroArgCtor());
+        assumeThat(utility, hasPrivateZeroArgCtor());
 
         Constructor<?> ctor = utility.getDeclaredConstructor();
         ctor.setAccessible(true);
