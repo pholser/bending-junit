@@ -18,12 +18,12 @@
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
-      <version>r09</version>
+      <version>11.0.1</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.9</version>
+      <version>4.10</version>
     </dependency>
     <dependency>
       <groupId>joda-time</groupId>
@@ -62,12 +62,5 @@
       </plugin>
     </plugins>
   </build>
-
-  <repositories>
-    <repository>
-      <id>http://maven.xwiki.org</id>
-      <url>http://maven.xwiki.org/externals</url>
-    </repository>
-  </repositories>
 
 </project>
