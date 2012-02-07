@@ -1,11 +1,9 @@
 package com.pholser.junit.matchers;
 
-import static com.pholser.junit.matchers.PredicateMatcher.*;
-
 import com.pholser.junit.util.Strings;
-
 import org.junit.Test;
 
+import static com.pholser.junit.matchers.PredicateMatcher.*;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 

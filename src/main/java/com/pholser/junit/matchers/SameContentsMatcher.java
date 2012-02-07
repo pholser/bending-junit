@@ -1,10 +1,9 @@
 package com.pholser.junit.matchers;
 
+import com.pholser.junit.util.Containers;
 import org.hamcrest.Description;
 
 import java.util.Collection;
-
-import com.pholser.junit.util.Containers;
 
 public class SameContentsMatcher<T> extends PredicateMatcher<Collection<T>> {
     private final Collection<T> exemplar;

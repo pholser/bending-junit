@@ -1,7 +1,5 @@
 package com.pholser.junit.parameterized;
 
-import com.pholser.junit.parameterized.PrimeFactors;
-
 import org.junit.Test;
 
 import static java.util.Arrays.*;

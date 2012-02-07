@@ -1,5 +1,10 @@
 package com.pholser.junit.theories.supply;
 
+import com.pholser.junit.matchers.ExceptionMatchers;
+import com.pholser.junit.parameterized.PrimeFactors;
+import com.pholser.junit.util.Classes;
+import com.pholser.junit.util.Containers;
+import com.pholser.junit.util.Strings;
 import org.junit.experimental.theories.ParameterSignature;
 import org.junit.experimental.theories.ParameterSupplier;
 import org.junit.experimental.theories.ParametersSuppliedBy;
@@ -9,14 +14,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.pholser.junit.util.Classes;
-import com.pholser.junit.util.Containers;
-import com.pholser.junit.util.Strings;
-
-import com.pholser.junit.parameterized.PrimeFactors;
-
-import com.pholser.junit.matchers.ExceptionMatchers;
 
 import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.*;

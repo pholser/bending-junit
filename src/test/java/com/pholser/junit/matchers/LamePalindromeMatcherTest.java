@@ -6,12 +6,12 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
-public class PalindromeMatcherTest {
-    private PalindromeMatcher isPalindrome;
+public class LamePalindromeMatcherTest {
+    private LamePalindromeMatcher isPalindrome;
 
     @Before
     public void setUp() {
-        isPalindrome = new PalindromeMatcher();
+        isPalindrome = new LamePalindromeMatcher();
     }
 
     @Test

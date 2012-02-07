@@ -8,8 +8,6 @@ import org.junit.runners.Parameterized.Parameters;
 import java.util.Collection;
 import java.util.List;
 
-import com.pholser.junit.parameterized.PrimeFactors;
-
 import static java.util.Arrays.*;
 import static java.util.Collections.*;
 import static org.junit.Assert.*;

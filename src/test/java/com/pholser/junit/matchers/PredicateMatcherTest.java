@@ -1,7 +1,5 @@
 package com.pholser.junit.matchers;
 
-import com.pholser.junit.matchers.PredicateMatcher;
-
 import com.google.common.base.Predicate;
 import org.hamcrest.Description;
 import org.junit.Before;

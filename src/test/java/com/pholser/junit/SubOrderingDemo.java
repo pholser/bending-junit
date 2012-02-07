@@ -1,9 +1,7 @@
 package com.pholser.junit;
 
 import com.pholser.junit.categories.InvolvingRules;
-
 import com.pholser.junit.rules.PrintingRule;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

@@ -1,7 +1,5 @@
 package com.pholser.junit.util;
 
-import com.pholser.junit.util.Containers;
-
 import org.junit.Test;
 
 import static java.util.Arrays.*;

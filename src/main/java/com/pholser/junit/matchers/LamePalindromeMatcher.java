@@ -2,10 +2,12 @@ package com.pholser.junit.matchers;
 
 import com.pholser.junit.util.Strings;
 import org.hamcrest.Description;
+import org.junit.internal.matchers.TypeSafeMatcher;
 
-public class PalindromeMatcher extends PredicateMatcher<String> {
-    public PalindromeMatcher() {
-        super(Strings._.isPalindrome);
+public class LamePalindromeMatcher extends TypeSafeMatcher<String> {
+    @Override
+    public boolean matchesSafely(String item) {
+        return Strings.isPalindrome(item);
     }
 
     @Override

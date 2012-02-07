@@ -8,7 +8,6 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 import static com.pholser.junit.matchers.ExceptionMatchers.*;
-
 import static org.junit.rules.ExpectedException.*;
 
 public abstract class UtilityClassHarness {

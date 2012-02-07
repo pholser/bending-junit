@@ -8,14 +8,14 @@ import org.junit.runner.RunWith;
 
 import java.util.Collection;
 
-import static com.pholser.junit.matchers.SameContentsMatcher.*;
+import static com.pholser.junit.matchers.LameSameContentsMatcher.*;
 import static java.util.Arrays.*;
 import static java.util.Collections.*;
 import static org.junit.Assert.*;
 import static org.junit.Assume.*;
 
 @RunWith(Theories.class)
-public class SameContentsMatcherTest {
+public class LameSameContentsMatcherTest {
     @DataPoints
     public static Collection<?>[] containers() {
         return new Collection<?>[] {

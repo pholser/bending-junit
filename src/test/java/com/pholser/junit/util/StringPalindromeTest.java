@@ -1,9 +1,8 @@
 package com.pholser.junit.util;
 
-import static com.pholser.junit.util.Strings.*;
-
 import org.junit.Test;
 
+import static com.pholser.junit.util.Strings.*;
 import static org.junit.Assert.*;
 
 public class StringPalindromeTest {

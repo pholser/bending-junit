@@ -1,7 +1,6 @@
 package com.pholser.junit;
 
 import com.pholser.junit.categories.InvolvingRules;
-
 import org.junit.experimental.categories.Categories;
 import org.junit.experimental.categories.Categories.IncludeCategory;
 import org.junit.runner.RunWith;
