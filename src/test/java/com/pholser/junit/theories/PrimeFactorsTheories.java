@@ -23,7 +23,7 @@ public class PrimeFactorsTheories {
     }
 
     @Theory
-    public void factorsMultiplyToOriginal(int n) {
+    public void factorsMultiplyToOriginal(@ForAll int n) {
         assumeThat(n, greaterThan(0));
 
         int product = 1;
@@ -31,5 +31,14 @@ public class PrimeFactorsTheories {
             product *= each;
 
         assertEquals(n, product);
+    }
+
+    @Theory
+    public void factorizationsAreUnique(@ForAll int m, @ForAll int n) {
+        assumeThat(m, greaterThan(0));
+        assumeThat(n, greaterThan(0));
+        assumeThat(m, not(equalTo(n)));
+
+        assertThat(PrimeFactors.of(m), not(equalTo(PrimeFactors.of(n))));
     }
 }
