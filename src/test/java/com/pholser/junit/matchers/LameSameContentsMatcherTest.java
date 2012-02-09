@@ -1,12 +1,12 @@
 package com.pholser.junit.matchers;
 
-import com.pholser.junit.util.Containers;
-import org.junit.experimental.theories.DataPoints;
-import org.junit.experimental.theories.Theories;
-import org.junit.experimental.theories.Theory;
-import org.junit.runner.RunWith;
-
 import java.util.Collection;
+
+import com.pholser.junit.util.Containers;
+import org.junit.contrib.theories.DataPoints;
+import org.junit.contrib.theories.Theories;
+import org.junit.contrib.theories.Theory;
+import org.junit.runner.RunWith;
 
 import static com.pholser.junit.matchers.LameSameContentsMatcher.*;
 import static java.util.Arrays.*;

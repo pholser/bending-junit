@@ -1,13 +1,13 @@
 package com.pholser.junit;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 import com.pholser.junit.categories.InvolvingRules;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.rules.ExpectedException;
-
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
 import static com.pholser.junit.matchers.ExceptionMatchers.*;
 import static org.junit.rules.ExpectedException.*;

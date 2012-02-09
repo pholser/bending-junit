@@ -1,10 +1,10 @@
 package com.pholser.junit.matchers;
 
+import java.util.Collection;
+
 import com.pholser.junit.util.Containers;
 import org.hamcrest.Description;
 import org.junit.internal.matchers.TypeSafeMatcher;
-
-import java.util.Collection;
 
 public class LameSameContentsMatcher<T> extends TypeSafeMatcher<Collection<T>> {
     private final Collection<T> exemplar;

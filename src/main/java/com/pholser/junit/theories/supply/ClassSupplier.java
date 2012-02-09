@@ -1,19 +1,21 @@
 package com.pholser.junit.theories.supply;
 
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
+
 import com.pholser.junit.matchers.ExceptionMatchers;
 import com.pholser.junit.parameterized.PrimeFactors;
 import com.pholser.junit.util.Classes;
 import com.pholser.junit.util.Containers;
 import com.pholser.junit.util.Strings;
-import org.junit.experimental.theories.ParameterSignature;
-import org.junit.experimental.theories.ParameterSupplier;
-import org.junit.experimental.theories.ParametersSuppliedBy;
-import org.junit.experimental.theories.PotentialAssignment;
-
-import java.lang.annotation.Retention;
-import java.lang.annotation.Target;
-import java.util.ArrayList;
-import java.util.List;
+import org.junit.contrib.theories.ParameterSignature;
+import org.junit.contrib.theories.ParameterSupplier;
+import org.junit.contrib.theories.ParametersSuppliedBy;
+import org.junit.contrib.theories.PotentialAssignment;
 
 import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.*;
@@ -38,7 +40,7 @@ public class ClassSupplier extends ParameterSupplier {
 
     @Override
     public List<PotentialAssignment> getValueSources(ParameterSignature sig) {
-        if (sig.getType() != Class.class)
+        if (!(isClass(sig.getType()) || isParameterizedClass(sig.getType())))
             throw new IllegalStateException("Annotated parameter of " + sig.getType()
                 + " with @" + Any.class.getSimpleName());
 
@@ -46,5 +48,13 @@ public class ClassSupplier extends ParameterSupplier {
         for (Class<?> each : classes)
             assignments.add(PotentialAssignment.forValue(each.getName(), each));
         return assignments;
+    }
+
+    private static boolean isClass(Type type) {
+        return type == Class.class;
+    }
+
+    private boolean isParameterizedClass(Type type) {
+        return type instanceof ParameterizedType && isClass(((ParameterizedType) type).getRawType());
     }
 }

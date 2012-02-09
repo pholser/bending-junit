@@ -4,6 +4,10 @@ import com.google.common.base.Predicate;
 
 public class Strings {
     public static class _ {
+        private _() {
+            throw new UnsupportedOperationException();
+        }
+
         public static final Predicate<String> isPalindrome = new Predicate<String>() {
             @Override
             public boolean apply(String input) {

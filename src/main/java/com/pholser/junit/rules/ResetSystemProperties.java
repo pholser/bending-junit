@@ -1,10 +1,10 @@
 package com.pholser.junit.rules;
 
-import org.junit.rules.ExternalResource;
-
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Properties;
+
+import org.junit.rules.ExternalResource;
 
 public class ResetSystemProperties extends ExternalResource {
     private Properties original;

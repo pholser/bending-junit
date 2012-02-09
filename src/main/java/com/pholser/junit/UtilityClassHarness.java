@@ -1,11 +1,11 @@
 package com.pholser.junit;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 
 import static com.pholser.junit.matchers.ExceptionMatchers.*;
 import static org.junit.rules.ExpectedException.*;

@@ -1,13 +1,13 @@
 package com.pholser.junit.theories;
 
+import java.math.BigInteger;
+
 import com.pholser.junit.parameterized.PrimeFactors;
 import org.junit.contrib.theories.DataPoints;
 import org.junit.contrib.theories.Theories;
 import org.junit.contrib.theories.Theory;
 import org.junit.experimental.theories.DataPoint;
 import org.junit.runner.RunWith;
-
-import java.math.BigInteger;
 
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;

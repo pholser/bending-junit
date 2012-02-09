@@ -1,8 +1,8 @@
 package com.pholser.junit;
 
-import org.junit.Test;
-
 import java.util.Collections;
+
+import org.junit.Test;
 
 public class AssertionsAreNothingSpecialTest {
     @Test

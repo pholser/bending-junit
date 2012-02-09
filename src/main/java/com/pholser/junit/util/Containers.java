@@ -1,9 +1,9 @@
 package com.pholser.junit.util;
 
-import com.google.common.base.Predicate;
-
 import java.util.ArrayList;
 import java.util.Collection;
+
+import com.google.common.base.Predicate;
 
 public class Containers {
     private Containers() {
@@ -22,6 +22,10 @@ public class Containers {
     }
 
     public static class _ {
+        private _() {
+            throw new UnsupportedOperationException();
+        }
+
         public static Predicate<Collection<?>> hasSameContentsAs(final Collection<?> exemplar) {
             return new Predicate<Collection<?>>() {
                 @Override

@@ -1,5 +1,8 @@
 package com.pholser.junit.theories;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
 import com.pholser.junit.categories.InvolvingRules;
 import com.pholser.junit.theories.supply.ClassSupplier.Any;
 import org.junit.Rule;
@@ -8,9 +11,6 @@ import org.junit.contrib.theories.Theory;
 import org.junit.experimental.categories.Category;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
-
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 
 import static com.pholser.junit.matchers.ExceptionMatchers.*;
 import static com.pholser.junit.matchers.HasPrivateZeroArgConstructor.*;

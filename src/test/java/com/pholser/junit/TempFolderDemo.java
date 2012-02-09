@@ -1,12 +1,12 @@
 package com.pholser.junit;
 
+import java.io.File;
+
 import com.pholser.junit.categories.InvolvingRules;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.rules.TemporaryFolder;
-
-import java.io.File;
 
 import static org.junit.Assert.*;
 
