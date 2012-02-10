@@ -24,7 +24,7 @@ public class LameSameContentsMatcher<T> extends TypeSafeMatcher<Collection<T>> {
         description.appendValue(exemplar);
     }
 
-    public static <T> LameSameContentsMatcher<T> hasSameContentsAs(Collection<T> exemplar) {
-        return new LameSameContentsMatcher<T>(exemplar);
+    public static <U> LameSameContentsMatcher<U> hasSameContentsAs(Collection<U> exemplar) {
+        return new LameSameContentsMatcher<U>(exemplar);
     }
 }

@@ -19,7 +19,7 @@ public class SameContentsMatcher<T> extends PredicateMatcher<Collection<T>> {
         description.appendValue(exemplar);
     }
 
-    public static <T> SameContentsMatcher<T> hasSameContentsAs(Collection<T> exemplar) {
-        return new SameContentsMatcher<T>(exemplar);
+    public static <U> SameContentsMatcher<U> hasSameContentsAs(Collection<U> exemplar) {
+        return new SameContentsMatcher<U>(exemplar);
     }
 }
