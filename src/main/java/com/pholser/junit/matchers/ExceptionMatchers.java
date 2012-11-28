@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
-import org.junit.internal.matchers.TypeSafeMatcher;
+import org.hamcrest.TypeSafeMatcher;
 
 public class ExceptionMatchers {
     private ExceptionMatchers() {

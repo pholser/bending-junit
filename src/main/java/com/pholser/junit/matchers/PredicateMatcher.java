@@ -2,7 +2,7 @@ package com.pholser.junit.matchers;
 
 import com.google.common.base.Predicate;
 import org.hamcrest.Description;
-import org.junit.internal.matchers.TypeSafeMatcher;
+import org.hamcrest.TypeSafeMatcher;
 
 public abstract class PredicateMatcher<T> extends TypeSafeMatcher<T> {
     protected final Predicate<? super T> predicate;

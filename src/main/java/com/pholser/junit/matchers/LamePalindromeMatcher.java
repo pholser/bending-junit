@@ -2,7 +2,7 @@ package com.pholser.junit.matchers;
 
 import com.pholser.junit.util.Strings;
 import org.hamcrest.Description;
-import org.junit.internal.matchers.TypeSafeMatcher;
+import org.hamcrest.TypeSafeMatcher;
 
 public class LamePalindromeMatcher extends TypeSafeMatcher<String> {
     @Override
